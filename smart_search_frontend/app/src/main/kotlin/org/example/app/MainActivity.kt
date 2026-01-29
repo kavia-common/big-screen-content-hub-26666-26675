@@ -1,6 +1,5 @@
 package org.example.app
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.KeyEvent
 import android.view.inputmethod.EditorInfo
@@ -11,6 +10,7 @@ import org.example.app.epg.EpgFragment
 import org.example.app.favorites.FavoritesFragment
 import org.example.app.home.HomeFragment
 import org.example.app.search.SearchFragment
+import org.example.app.util.TvBackKeySearchClear
 
 /**
  * Main entrypoint activity hosting the STB big-screen app.
@@ -39,6 +39,12 @@ class MainActivity : FragmentActivity() {
         navHome.setOnClickListener { showHome() }
         navEpg.setOnClickListener { showEpg() }
         navFavorites.setOnClickListener { showFavorites() }
+
+        // STB/TV behavior: when the search box is focused and has text, BACK clears it
+        // instead of navigating away. If empty, normal back navigation is preserved.
+        TvBackKeySearchClear.registerBackToClearSearch(onBackPressedDispatcher, searchEditText)
+        // Fallback for some TV input stacks that deliver KEYCODE_BACK to the focused view.
+        TvBackKeySearchClear.installKeyListener(searchEditText)
 
         // Submit search with DPAD center / enter / IME action.
         searchEditText.setOnEditorActionListener { _, actionId, event ->
