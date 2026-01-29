@@ -1,0 +1,38 @@
+<resources>
+    <style name="Theme.OceanProfessional" parent="@android:style/Theme.DeviceDefault.NoActionBar">
+        <item name="android:colorBackground">@color/ocean_background</item>
+        <item name="android:statusBarColor">@color/ocean_background</item>
+        <item name="android:navigationBarColor">@color/ocean_background</item>
+
+        <item name="android:textColorPrimary">@color/ocean_text</item>
+        <item name="android:textColorSecondary">@color/ocean_text_muted</item>
+
+        <item name="android:colorAccent">@color/ocean_accent</item>
+    </style>
+
+    <!-- Base namespace styles required by some AAPT configurations when using Widget.* names -->
+    <style name="Widget" />
+    <style name="Widget.Ocean" />
+
+    <style name="Widget.Ocean.TitleText">
+        <item name="android:textSize">26sp</item>
+        <item name="android:textColor">@color/ocean_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.Ocean.SectionTitleText">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/ocean_text</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.Ocean.BodyText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/ocean_text</item>
+    </style>
+
+    <style name="Widget.Ocean.MutedText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/ocean_text_muted</item>
+    </style>
+</resources>

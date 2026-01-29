@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/epgRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/epgTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/epg_title"
+        android:paddingBottom="12dp"
+        style="@style/Widget.Ocean.TitleText" />
+
+    <HorizontalScrollView
+        android:id="@+id/epgHorizontalScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/epgInner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/channelsRecyclerView"
+                android:layout_width="@dimen/epg_channel_col_width"
+                android:layout_height="match_parent"
+                android:focusable="false" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rowsRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="12dp"
+                android:focusable="false" />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>

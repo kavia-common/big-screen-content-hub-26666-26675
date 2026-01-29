@@ -1,0 +1,13 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/channelName"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/epg_row_height"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/bg_focusable_surface"
+    android:gravity="center_vertical"
+    android:paddingStart="14dp"
+    android:paddingEnd="14dp"
+    android:textSize="18sp"
+    android:textColor="@color/ocean_text"
+    android:focusable="true"
+    android:focusableInTouchMode="true" />

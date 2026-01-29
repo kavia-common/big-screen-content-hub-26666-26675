@@ -1,0 +1,74 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/searchRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/searchInner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/searchTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search"
+            android:paddingBottom="12dp"
+            style="@style/Widget.Ocean.TitleText" />
+
+        <TextView
+            android:id="@+id/searchHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/search_empty_state"
+            android:paddingBottom="12dp"
+            style="@style/Widget.Ocean.MutedText" />
+
+        <TextView
+            android:id="@+id/vodSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VOD"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            style="@style/Widget.Ocean.SectionTitleText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/vodResultsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/epgSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="EPG"
+            android:paddingTop="18dp"
+            android:paddingBottom="10dp"
+            style="@style/Widget.Ocean.SectionTitleText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/epgResultsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false" />
+
+        <TextView
+            android:id="@+id/favSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Favorites"
+            android:paddingTop="18dp"
+            android:paddingBottom="10dp"
+            style="@style/Widget.Ocean.SectionTitleText" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favResultsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false" />
+
+    </LinearLayout>
+</ScrollView>

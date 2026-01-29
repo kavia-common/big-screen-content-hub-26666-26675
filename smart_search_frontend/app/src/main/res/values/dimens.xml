@@ -1,0 +1,12 @@
+<resources>
+    <dimen name="safe_padding">48dp</dimen>
+    <dimen name="card_radius">14dp</dimen>
+    <dimen name="card_padding">14dp</dimen>
+    <dimen name="rail_item_width">220dp</dimen>
+    <dimen name="rail_item_height">140dp</dimen>
+    <dimen name="thumb_radius">12dp</dimen>
+
+    <dimen name="epg_channel_col_width">230dp</dimen>
+    <dimen name="epg_program_cell_width">320dp</dimen>
+    <dimen name="epg_row_height">88dp</dimen>
+</resources>

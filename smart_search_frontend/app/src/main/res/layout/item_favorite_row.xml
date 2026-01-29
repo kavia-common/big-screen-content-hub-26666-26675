@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/favRowRoot"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/bg_focusable_surface"
+    android:orientation="horizontal"
+    android:padding="@dimen/card_padding"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/favThumb"
+        android:layout_width="140dp"
+        android:layout_height="90dp"
+        android:background="@drawable/thumb_slate"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:id="@+id/favTextCol"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/favTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            style="@style/Widget.Ocean.BodyText" />
+
+        <TextView
+            android:id="@+id/favSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            style="@style/Widget.Ocean.MutedText" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/favRemove"
+        android:layout_width="120dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="12dp"
+        android:background="@drawable/bg_focusable_surface"
+        android:text="Remove"
+        android:textSize="18sp"
+        android:textColor="@color/ocean_text"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+</LinearLayout>
