@@ -17,9 +17,11 @@ include("utilities")
 
 defaults {
     androidApplication {
+        // Android 14 / API 34 upgrade: keep JDK 17 and raise/retain compileSdk 34 for modern compliance.
         jdkVersion = 17
         compileSdk = 34
-        minSdk = 30
+        // Reasonable Android TV/STB baseline; keep low unless app code requires higher.
+        minSdk = 24
 
         versionCode = 1
         versionName = "0.1"
@@ -34,9 +36,10 @@ defaults {
     }
 
     androidLibrary {
+        // Android 14 / API 34 upgrade alignment for library modules.
         jdkVersion = 17
         compileSdk = 34
-        minSdk = 30
+        minSdk = 24
 
         testing {
             dependencies {
